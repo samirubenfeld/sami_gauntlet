@@ -63,9 +63,14 @@ view: funding {
 
   #MEASURES
 
-  measure: sum_raised_amount {
+  measure: sum_raised_amount_USD {
     type: sum
     sql: ${TABLE}.raised_amount ;;
+    value_format_name: usd
+    filters: {
+      field: raised_currency_code
+      value : "USD"
+    }
   }
 
   measure: average_raised_amount {
