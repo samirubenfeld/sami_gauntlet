@@ -73,6 +73,56 @@ view: funding {
     }
   }
 
+  measure: sum_raised_amount_EUR {
+    type: sum
+    sql: ${TABLE}.raised_amount ;;
+    value_format_name: eur
+    filters: {
+      field: raised_currency_code
+      value : "EUR"
+    }
+  }
+
+  measure: sum_raised_amount_GBP {
+    type: sum
+    sql: ${TABLE}.raised_amount ;;
+    value_format_name: gbp
+    filters: {
+      field: raised_currency_code
+      value : "GBP"
+    }
+  }
+
+  measure: average_raised_amount_USD {
+    type: average
+    sql: ${TABLE}.raised_amount ;;
+    value_format_name: usd
+    filters: {
+      field: raised_currency_code
+      value : "USD"
+    }
+  }
+
+  measure: average_raised_amount_EUR {
+    type: average
+    sql: ${TABLE}.raised_amount ;;
+    value_format_name: eur
+    filters: {
+      field: raised_currency_code
+      value : "EUR"
+    }
+  }
+
+  measure: average_raised_amount_GBP {
+    type: average
+    sql: ${TABLE}.raised_amount ;;
+    value_format_name: gbp
+    filters: {
+      field: raised_currency_code
+      value : "GBP"
+    }
+  }
+
   measure: average_raised_amount {
     type: average
     sql: ${TABLE}.raised_amount ;;
