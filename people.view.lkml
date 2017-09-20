@@ -13,6 +13,7 @@ view: people {
 
   dimension: permalink {
     type: string
+    primary_key: yes
     sql: ${TABLE}.permalink ;;
   }
 

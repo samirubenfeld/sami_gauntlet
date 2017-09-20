@@ -80,6 +80,7 @@ view: companies {
   }
 
   dimension: permalink {
+    primary_key: yes
     type: string
     sql: ${TABLE}.permalink ;;
   }

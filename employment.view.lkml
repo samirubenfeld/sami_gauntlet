@@ -19,6 +19,7 @@ view: employment {
 
   dimension: permalink {
     type: string
+
     sql: ${TABLE}.permalink ;;
   }
 
