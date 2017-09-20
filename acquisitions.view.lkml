@@ -16,6 +16,7 @@ view: acquisitions {
   }
 
   dimension: acquired_by_permalink {
+    primary_key: yes
     type: string
     sql: ${TABLE}.acquired_by_permalink ;;
   }
