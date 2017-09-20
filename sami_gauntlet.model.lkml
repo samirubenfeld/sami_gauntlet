@@ -14,13 +14,7 @@ explore: companies {
   type: left_outer
   sql_on:${companies.permalink} = ${company_buyer.acquired_by_permalink};;
   relationship: many_to_one
-}
-#   join: acquisitioned {
-#     from: acquisitions
-#     type: left_outer
-#     sql_on:${companies.permalink} = ${acquisitioned.acquired_permalink};;
-#     relationship: one_to_one
-#   }
+  }
   join: investments {
     type: left_outer
     sql_on:${investments.investor_permalink} = ${companies.permalink};;
@@ -42,6 +36,13 @@ explore: companies {
     relationship: many_to_one
   }
 }
+
+#   join: acquisitioned {
+#     from: acquisitions
+#     type: left_outer
+#     sql_on:${companies.permalink} = ${acquisitioned.acquired_permalink};;
+#     relationship: one_to_one
+#   }
 
 # explore: companies_to_update {}
 #
