@@ -38,6 +38,6 @@ view: acquisitions {
 
   measure: count {
     type: count
-    drill_fields: []
+    drill_fields: [price_amount, currency, count, acquired_date, company.name]
   }
 }

@@ -11,19 +11,35 @@ view: companies {
     sql: ${TABLE}.category_code ;;
   }
 
+
   dimension_group: created {
     type: time
     timeframes: [
       raw,
+      hour,
+      day_of_month,
+      day_of_week,
+      day_of_week_index,
+      day_of_year,
+      hour_of_day,
+      fiscal_month_num,
+      fiscal_quarter,
+      fiscal_quarter_of_year,
+      fiscal_year,
       time,
       date,
       week,
+      minute,
       month,
+      month_name,
+      month_num,
       quarter,
+      quarter_of_year,
       year
     ]
     sql: ${TABLE}.created_at ;;
   }
+
 
   dimension: crunchbase_url {
     type: string
@@ -44,10 +60,25 @@ view: companies {
     type: time
     timeframes: [
       raw,
+      hour,
+      day_of_month,
+      day_of_week,
+      day_of_week_index,
+      day_of_year,
+      hour_of_day,
+      fiscal_month_num,
+      fiscal_quarter,
+      fiscal_quarter_of_year,
+      fiscal_year,
+      time,
       date,
       week,
+      minute,
       month,
+      month_name,
+      month_num,
       quarter,
+      quarter_of_year,
       year
     ]
     convert_tz: no
@@ -99,11 +130,25 @@ view: companies {
     type: time
     timeframes: [
       raw,
+      hour,
+      day_of_month,
+      day_of_week,
+      day_of_week_index,
+      day_of_year,
+      hour_of_day,
+      fiscal_month_num,
+      fiscal_quarter,
+      fiscal_quarter_of_year,
+      fiscal_year,
       time,
       date,
       week,
+      minute,
       month,
+      month_name,
+      month_num,
       quarter,
+      quarter_of_year,
       year
     ]
     sql: ${TABLE}.updated_at ;;
